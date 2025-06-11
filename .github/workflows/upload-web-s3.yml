@@ -3,7 +3,7 @@ name: update web s3
 on:
   push:
     branches:
-      -main
+      - main
 
 jobs:
   update_s3_web:
