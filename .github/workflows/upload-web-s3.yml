@@ -23,7 +23,7 @@ jobs:
 
       - name: Upload to s3
         run: |
-          aws s3 cp . s3://${{ secrets.S3_BUCKET_NAME }}
+          aws s3 cp . s3://${{ secrets.S3_BUCKET_NAME }}/ --recursive
         env:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
